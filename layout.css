@@ -4,7 +4,8 @@
 
 .View {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
+    min-height: 100vh;
     margin: 0;
 }
 
@@ -14,17 +15,36 @@
 
 .Header {
     background-color: orange;
-    flex-basis: 50%;
-    height: calc(100vh - var(--footerHeight));
 }
 
 .Main {
     background-color: green;
-    flex-basis: 50%;
+    flex-grow: 1;
 }
 
 .Footer {
     background-color: yellow;
-    flex-basis: 100%;
     height: var(--footerHeight);
+}
+
+@media screen and (min-width: 600px) {
+
+    .View {
+        flex-flow: row wrap;
+    }
+
+    .Header {
+        flex-basis: 50%;
+        min-height: calc(100vh - var(--footerHeight));
+    }
+
+    .Main {
+        flex-basis: 50%;
+    }
+
+    .Footer {
+        flex-basis: 100%;
+        height: var(--footerHeight);
+    }
+
 }
