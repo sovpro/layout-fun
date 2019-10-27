@@ -1,0 +1,93 @@
+:root {
+    --footerHeight: 100px;
+}
+
+.View {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+
+    background: rgb(34, 34, 34);
+    color: rgb(221, 221, 221);
+    font-family:sans-serif;
+}
+
+.Header, .Main, .Footer {
+    flex-shrink: 0;
+}
+
+.Header {
+    align-items: center;
+    display: flex;
+    flex-basis: 50%;
+    flex-flow: column;
+    justify-content: center;
+    height: calc(100vh - var(--footerHeight));
+}
+.Header__Title {
+    margin: 0;
+}
+.Header__Version {
+    font-size: 0.5em;
+    font-weight: normal;
+}
+.Header__SubText {
+    margin: 0;
+}
+
+.Main {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-basis: 50%;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.Guide {
+    flex-basis: 80%;
+    flex-shrink: 0;
+}
+.Guide__Title {}
+.Guide__DescriptionLinks {}
+
+.DescriptionLinks {}
+.DescriptionLinks__Name {
+    margin-top: 0.5em;
+    padding: 0.5em 1em 0;
+    
+    background-color: rgb(51, 51, 51);
+    font-weight: bold;
+}
+.DescriptionLinks__Text {
+    padding: 0 1em 0.5em;
+
+    background-color: rgb(51, 51, 51);
+    margin: 0;
+}
+
+.Footer {
+    flex-basis: 100%;
+    height: var(--footerHeight);
+}
+.FooterLinks {
+    display: flex;
+    flex-flow: row wrap;
+    height: 60px;
+    justify-content: center;
+
+    text-decoration: none;
+}
+.FooterLink,
+.FooterLink--isolated {
+    align-self: start;
+    margin: 0 0.5em;
+
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.FooterLink--isolated {
+    align-self: end;
+    margin: 0 100%;
+}

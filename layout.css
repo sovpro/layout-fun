@@ -1,0 +1,30 @@
+:root {
+    --footerHeight: 100px;
+}
+
+.View {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+}
+
+.Header, .Main, .Footer {
+    flex-shrink: 0;
+}
+
+.Header {
+    background-color: orange;
+    flex-basis: 50%;
+    height: calc(100vh - var(--footerHeight));
+}
+
+.Main {
+    background-color: green;
+    flex-basis: 50%;
+}
+
+.Footer {
+    background-color: yellow;
+    flex-basis: 100%;
+    height: var(--footerHeight);
+}
