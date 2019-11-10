@@ -1,0 +1,69 @@
+:root {
+    --progress_width: 500px;
+    --progress_height: calc(var(--progress_width) / 12);
+    --border_width: 3px;
+    --progress_color: blue;
+    --border_color: gray;
+    --bar_color: lightgray;
+    --increase_color: yellow;
+    --decrease_color: red;
+    --value_bgcolor: orange;
+}
+
+.AsyncProgress {
+    position: relative;
+    height: var(--progress_height);
+    width:  var(--progress_width);
+    background-color: var(--progress_color);
+} 
+
+.AsyncProgress > progress {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.AsyncProgress > progress[value] {
+    -webkit-appearance: none;
+}
+
+.AsyncProgress > progress[value]::-webkit-progress-inner-element {
+    border: var(--border_width) solid var(--border_color);
+}
+
+.AsyncProgress > progress[value]::-webkit-progress-bar {
+    background-color: var(--bar_color);
+    cursor: pointer;
+ }
+
+.AsyncProgress > progress[value]::-webkit-progress-value {
+    background-color: var(--value_bgcolor);
+}
+
+.AsyncProgress__Brink {
+    box-sizing: border-box;
+    border: var(--border_width) solid var(--border_color);
+    border-left: 0 none;
+    border-right: 0 none;
+    pointer-events: none;
+    position: absolute;
+    height: 100%;
+    width: 0;
+    visibility: collapse;
+}
+
+.AsyncProgress__Brink--increase,
+.AsyncProgress__Brink--decrease {
+    visibility: visible;
+}
+
+.AsyncProgress__Brink--increase {
+    background-color: var(--increase_color);
+}
+
+.AsyncProgress__Brink--decrease {
+    background-color: var(--decrease_color);
+}
