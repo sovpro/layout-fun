@@ -1,0 +1,17 @@
+{
+  "public": ".",
+  "directoryListing": [
+    "/**"
+  ],
+  "unlisted": [
+    ".git",
+    ".gitignore",
+    "node_modules",
+    "package.json",
+    "package-lock.json",
+    "serve.json",
+    "index.js",
+    "README.md"
+  ],
+  "trailingSlash": false
+}
