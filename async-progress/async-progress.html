@@ -5,10 +5,18 @@
     <link rel="stylesheet" href="async-progress.css">
 </head>
 <body>
+    <p>An IXD prototype demonstrating a UI control that reflects target and reported state.</p>
+    <ol>
+      <li>What if we need a slider representing some value on a networked device configurable within a range?</li>
+      <li>...and we need to reflect the value the user is intending to change that value to (Target State)</li>
+      <li>...and we need to reflect the most recently reported value from the device (Reported State)</li>
+   </ol>
     <div class="AsyncProgress">
         <progress class="AsyncProgress__Bar" value="0.3" max="1" min="0"></progress>
         <div class="AsyncProgress__Brink"></div>
     </div>
+    <p>When increasing the value the difference between the target and reported state is in <span class="hl-increase">yellow</span>.</p>
+    <p>When decreasing the value the difference between teh target and reported state is in <span class="hl-decrease">red</span>.</p>
     <script src="async-progress.js"></script>
 </body>
 </html>

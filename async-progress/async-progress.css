@@ -67,3 +67,18 @@
 .AsyncProgress__Brink--decrease {
     background-color: var(--decrease_color);
 }
+
+.hl-increase {
+  background-color: var(--increase_color);
+}
+
+.hl-decrease {
+  background-color: var(--decrease_color);
+  color: white;
+}
+
+[class|="hl"] {
+  display: inline-block;
+  margin-right: 0.1em;
+  padding: 0 0.5em;
+}
